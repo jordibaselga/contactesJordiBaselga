@@ -3,11 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-
-        {% block javascripts %}{% endblock %}
+        {% block stylesheets %}
+        <link href="{{assets('css/estils.css')}}" rel="stylesheet"/>
+        {% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
+        {% block javascripts %}
+        <script src="{{ asset('js/llibreria.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
